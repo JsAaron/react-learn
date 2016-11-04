@@ -6,5 +6,11 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, './build'),
         filename: 'bundle.js',
+    },
+    module: {
+        loaders: [{
+            test: /\.js|jsx$/,
+            loaders: ['babel?presets[]=es2015,presets[]=react,presets[]=stage-0']
+        }]
     }
 }
